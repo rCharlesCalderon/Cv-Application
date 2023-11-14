@@ -1,6 +1,8 @@
 import { useState } from "react";
+import './CvInputContainer.css'
 import CvData from "./CvData";
 import Input from "./Input";
+import ExperienceForm from "./ExperienceForm";
 function CvInputContainer({setName,setEmail,setPhone,setAddress}){
    
  
@@ -22,11 +24,13 @@ function handleAddressInfo(e) {
   CvData.Address = e.target.value;
   console.log(CvData);
 }
+const [btnCount,setBntCount] = useState(0)
+
 function handleExperienceInfo(){
+  setBntCount(btnCount + 1)
+
 }
-//experiecen button will create an obj 
-//display a container with the info 
-//
+
 return (
   <>
     <div className="CvInputContainer">
@@ -36,6 +40,9 @@ return (
       <Input label="Address" onChange={handleAddressInfo} />
 
       <button onClick={handleExperienceInfo}>+Add Experience</button>
+      {btnCount !== 0 && CvData.Experience.map((data) =>{
+        <ExperienceForm key={data.id}/>
+      })}
     </div>
   </>
 );
