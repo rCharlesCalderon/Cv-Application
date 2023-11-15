@@ -9,6 +9,7 @@ const [inputName, setNameData] = useState(CvData.Name);
 const [inputEmail, setEmailData] = useState(CvData.Email);
 const [inputPhone, setPhoneData] = useState(CvData.PhoneNumber);
 const [inputAddress, setAddressData] = useState(CvData.Address);
+
 const [inputJob, setJobData] = useState('');
 
 //
@@ -16,7 +17,7 @@ const [inputJob, setJobData] = useState('');
 
   return (
    <>
-   <CvInputContainer setName={setNameData} setEmail={setEmailData} setPhone={setPhoneData} setAddress={setAddressData} setJob={setJobData}/>
+   <CvInputContainer setName={setNameData} setEmail={setEmailData} setPhone={setPhoneData} setAddress={setAddressData} setJob={setJobData} />
    <CvOutputContainer nameData={inputName} emailData={inputEmail} phoneData={inputPhone} addressData={inputAddress} jobData={inputJob}/>
    </>
     

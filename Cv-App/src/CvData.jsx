@@ -1,5 +1,5 @@
 let CvData = {
-  Name: "Talon",
+  Name: "",
   Email: "TalonMain@gmail.com",
   PhoneNumber: "+1 (XXX) XXX-XXXX",
   Address: "California USA",
