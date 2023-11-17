@@ -5,7 +5,7 @@ import trashImg from "./assets/trash.svg"
 import ExperienceForm from "./ExperienceForm";
 import ContactInput from "./ContactInput.jsx";
 import Menu from './Menu.jsx'
-function CvInputContainer({setName,setEmail,setNumber,setAddress,setJob,setEmployer,setEndDate,setCity,setDescription,setExpBntCount,expBtnCount}){
+function CvInputContainer({setName,setEmail,setNumber,setAddress,setJob,setEmployer,setStartDate,setEndDate,setCity,setDescription,setExpBntCount,expBtnCount}){
 
 
 
@@ -38,7 +38,7 @@ return (
         <span className="experience-title">Experience</span>
         {expBtnCount !== 0 && CvData.Experience.map((expObj,index) =>{ 
           return (<div key={expObj.id}> 
-          <Menu title= {`Experience(${index})`} inputForm={<ExperienceForm setJob={setJob} setEmployer={setEmployer} setEndDate={setEndDate} setCity={setCity} setDescription={setDescription} data = {expObj}/>}/>
+          <Menu title= {`Experience(${index})`} inputForm={<ExperienceForm setJob={setJob} setEmployer={setEmployer} setStartDate = {setStartDate }setEndDate={setEndDate} setCity={setCity} setDescription={setDescription} data = {expObj}/>}/>
            </div>)
         })}
         <button className="experience-btn" onClick={handleExperienceInfo}>Add Experience +</button>

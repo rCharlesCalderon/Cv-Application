@@ -28,7 +28,7 @@ const [inputDescription, setDescription] = useState("");
     <>
        <Header/>
        <CvInputContainer setName = {setNameData} setEmail = {setEmailData} setNumber = {setPhoneData} setAddress = {setAddressData} setJob={setJobData} setEmployer={setEmployer} setStartDate = {setStartDate} setEndDate={setEndDate} setCity ={setCity} setDescription={setDescription} setExpBntCount={setExpBntCount} expBtnCount={expBtnCount}/>
-       <CvOutputContainer nameData = {inputName} emailData = {inputEmail} phoneData = {inputPhone} addressData = {inputAddress} jobData={inputJob} employerData={inputEmployer} setStartDate = {inputStart} setEndDate = {inputEndDate} cityData = {inputCity} setDescription = {inputDescription} expBtnCount = {expBtnCount}/>
+       <CvOutputContainer nameData = {inputName} emailData = {inputEmail} phoneData = {inputPhone} addressData = {inputAddress} jobData={inputJob} employerData={inputEmployer} startDateData = {inputStart} endDateData = {inputEndDate} cityData = {inputCity} descriptionData = {inputDescription} expBtnCount = {expBtnCount}/>
        <Footer/>
     </>
   );

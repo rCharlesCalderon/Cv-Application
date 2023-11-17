@@ -3,7 +3,7 @@ import mailImg from './assets/mail.svg'
 import phoneImg from "./assets/phone.svg";
 import locationImg from "./assets/location.svg";
 import CvData from "./CvData";
-function CvOutputContainer({nameData,emailData,phoneData,addressData,jobData,employerData,startDateData,endDateData,cityData,expBtnCount}){
+function CvOutputContainer({nameData,emailData,phoneData,addressData,jobData,employerData,startDateData,endDateData,descriptionData,cityData,expBtnCount}){
     return (
       <>
         <div className="CvOutputContainer">
@@ -36,9 +36,16 @@ function CvOutputContainer({nameData,emailData,phoneData,addressData,jobData,emp
                 <span>Experience</span>
                 <hr></hr>
                 <div className="experience-info">
-                  <li className="job-info">{jobData}</li>
-                  <p className="city-info"> {cityData}</p>
+                  <ul>
+                    <li className="job-info">{jobData}</li>
+                    <li> {employerData}</li>
+                    <li>
+                      {startDateData}-{endDateData}
+                    </li>
+                  </ul>
+                  <p className="city-info">{cityData}</p>
                 </div>
+                <p className="description-info">- {descriptionData} </p>
               </div>
             )}
           </div>

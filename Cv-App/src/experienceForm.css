@@ -51,7 +51,7 @@
   margin-top: 10px;
   min-height: 22px;
   width: 80%;
-border: 1px black solid;
+
 }
 
 .experience-container span{
@@ -63,23 +63,19 @@ border: 1px black solid;
 .experience-info{
     display: flex;
   min-height: 30px;
-  border: 1px black solid;
  justify-content: space-between;
+
 }
 
 .job-info{
-    border: 1px red solid;
-    padding: 0px;
-     white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis;
+  word-break: break-all;
+
 }
 .city-info {
     display: flex;
-    border: 1px green solid;
-  white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis;
+    height: 20px;
+    }
 
-    
+.description-info {
+     word-break: break-all;
 }
