@@ -1,8 +1,8 @@
 function Header(){
 return (
-    <>
-    <div>adada</div>
-    </>
-)
+  <>
+    <div className="header">CV Generator</div>
+  </>
+);
 }
 export default Header

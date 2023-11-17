@@ -1,0 +1,24 @@
+.menu-container {
+    display: flex;
+    border: 1px purple solid;
+    width: 80%;
+    min-height: 25px;
+    border-radius: 5px;
+    flex-direction: column;
+    padding: 10px;
+}
+.contact-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    height: 160px;
+    column-gap: 50px;
+    font-size: 1.1em;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+}
+.contact-inputs input {
+    width: 320px;
+    height: 25px;
+    border-radius: 5px;
+}
+

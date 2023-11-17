@@ -1,10 +1,39 @@
 .CvInputContainer{
-    width: 50%;
-    border: 1px green solid;
-    height: 100vh;
+  display: grid;
+  grid-row: 2/4;
+  grid-column: 1/2;
+   border: 3px green solid;
+   flex-direction: column;
 }
 
-.CvInputContainer button{
-  margin-top: 200px;
+.CvInputContainer label {
+  display: flex;
+  flex-direction: column;
+  
 }
 
+.inputs {
+  display: flex;
+  flex-direction: column;
+  padding:40px 10px 0px 40px;
+  border: 2px red solid;
+  height: 100%;
+  gap: 10px;
+}
+.inputs span{
+font-family: 'Times New Roman', Times, serif;
+
+}
+.personal-title{
+  font-size: 1.7em;
+}
+.experience-title{
+  margin-top: 30px;
+  font-size: 1.7em;
+}
+.experience-btn{
+  width: 18%;
+  background: none;
+  height: 30px;
+  font-size: 1em;
+}
