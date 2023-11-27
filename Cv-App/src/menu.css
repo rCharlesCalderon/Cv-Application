@@ -1,11 +1,17 @@
 .menu-container {
+    
     display: flex;
-    border: 1px purple solid;
+    border: 1px black solid;
     width: 80%;
     min-height: 25px;
     border-radius: 5px;
     flex-direction: column;
     padding: 10px;
+    gap: 15px;
+}
+.menu-container:hover {
+    border-color: lightslategray;
+   
 }
 .contact-inputs {
     display: flex;
@@ -17,7 +23,7 @@
     margin-top: 10px;
 }
 .contact-inputs input {
-    width: 320px;
+    max-width: 320px;
     height: 25px;
     border-radius: 5px;
 }

@@ -7,25 +7,24 @@
 .CvOutputContainer{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  grid-row: 2 / 4;
+  grid-row: 2 / 5;
   grid-column: 2 / 3;
-  border: 3px purple solid;
-
+  background-color: whitesmoke;
+ 
 }
 
 .output-data-container{
   display: flex;
 
-  height: 93%;
+  min-height: 700px;
   width: 57%;
   background-color: white;
   flex-direction: column;
   padding-top: 60px;
 align-items: center;
 gap: 7px;
-box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 25px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 border-radius: 2px;
 }
 
@@ -57,3 +56,94 @@ border-radius: 2px;
   height: 15px;
 }
 
+hr{
+  width: 85%;
+}
+
+.experience-input-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    column-gap: 50px;
+}
+.experience-input-container input {
+   border-radius: 5px;
+}
+
+.job-title input {
+    width: 320px;
+    height: 25px;
+    
+}
+
+.employer-input input{
+    width: 320px;
+    height: 25px;
+}
+
+.start-date-input input {
+    width: 210px;
+    height: 25px;
+}
+
+.end-date-input input{
+     width: 210px;
+    height: 25px;
+}
+.city-input input {
+     height: 25px;
+}
+.description-input{
+    width: 100%;
+}
+.description-input textarea {
+   width: 100%;
+    min-height: 80px;
+   vertical-align: top;
+   resize: none;
+     border-radius: 5px;
+}
+
+.input-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  min-height: 22px;
+  width: 80%;
+
+}
+/*  */
+.input-container span{
+ font-size: 1.1em;
+ font-family: 'Times New Roman', Times, serif;
+ 
+}
+
+.input-info{
+    display: flex;
+  min-height: 30px;
+ justify-content: space-between;
+
+}
+.input-info li{
+   
+list-style: none;
+}
+.input-info li:nth-of-type(1){
+   
+list-style: circle;
+}
+
+.job-info{
+  word-break: break-all;
+
+}
+.city-info {
+    display: flex;
+    height: 20px;
+    }
+
+.description-info {
+     word-break: break-all;
+}

@@ -8,28 +8,25 @@ import CvData from './CvData.jsx';
 
 function App() {
   //Contact Info
-const [inputName, setNameData] = useState(CvData.Name);
-const [inputEmail, setEmailData] = useState(CvData.Email);
-const [inputPhone, setPhoneData] = useState(CvData.PhoneNumber);
-const [inputAddress, setAddressData] = useState(CvData.Address);
-//Experience Info
-const [expBtnCount, setExpBntCount] = useState(0);
-const [inputJob, setJobData] = useState('');
-const [inputEmployer,setEmployer] = useState('')
-const [inputStart,setStartDate] = useState('')
-const [inputEndDate,setEndDate] = useState('')
-const[inputCity,setCity] = useState('')
-const [inputDescription, setDescription] = useState("");
+const [cData,setCvData] = useState( {
+  name: "",
+  Email: "",
+  PhoneNumber: "",
+  Address: "",
+  Experience: [],
+  Education: [],
+  CustomSkills: [],
+})
 
 //
 
                                                                                                    //setJob, setEmployer, setEndDate, setCityInfo, setDescription;
   return (
     <>
-       <Header/>
-       <CvInputContainer setName = {setNameData} setEmail = {setEmailData} setNumber = {setPhoneData} setAddress = {setAddressData} setJob={setJobData} setEmployer={setEmployer} setStartDate = {setStartDate} setEndDate={setEndDate} setCity ={setCity} setDescription={setDescription} setExpBntCount={setExpBntCount} expBtnCount={expBtnCount}/>
-       <CvOutputContainer nameData = {inputName} emailData = {inputEmail} phoneData = {inputPhone} addressData = {inputAddress} jobData={inputJob} employerData={inputEmployer} startDateData = {inputStart} endDateData = {inputEndDate} cityData = {inputCity} descriptionData = {inputDescription} expBtnCount = {expBtnCount}/>
-       <Footer/>
+      <Header />
+      <CvInputContainer cData={cData} setCvData={setCvData} />
+      <CvOutputContainer cData={cData} setCvData={setCvData} />
+      <Footer />
     </>
   );
 }

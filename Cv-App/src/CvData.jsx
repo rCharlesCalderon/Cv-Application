@@ -1,9 +1,9 @@
 let CvData = {
-  Name: "",
+  name: "",
   Email: "",
   PhoneNumber: "",
   Address: "",
-  Experience: [],
+  experience: [],
   Education: [],
   CustomSkills: [],
 };
