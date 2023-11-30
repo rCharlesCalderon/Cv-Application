@@ -1,0 +1,93 @@
+
+
+
+.experience-input-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    column-gap: 50px;
+}
+
+
+
+.experience-input-container input {
+   border-radius: 5px;
+ box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.job-title input {
+    width: 320px;
+    height: 25px;
+}
+
+.employer-input input{
+    width: 320px;
+    height: 25px;
+}
+
+.start-date-input input {
+    width: 210px;
+    height: 25px;
+}
+
+.end-date-input input{
+     width: 210px;
+    height: 25px;
+}
+.city-input input {
+     height: 25px;
+}
+.description-input{
+    width: 100%;
+}
+.description-input textarea {
+   width: 100%;
+    min-height: 80px;
+   vertical-align: top;
+   resize: none;
+     border-radius: 5px;
+}
+
+.experience-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  min-height: 22px;
+  width: 80%;
+
+}
+
+.experience-container span{
+ font-size: 1.1em;
+ font-family: 'Times New Roman', Times, serif;
+ 
+}
+
+.experience-info{
+    display: flex;
+  min-height: 30px;
+ justify-content: space-between;
+
+}
+.experience-info li{
+   
+list-style: none;
+}
+.experience-info li:nth-of-type(1){
+   
+list-style: circle;
+}
+
+.job-info{
+  word-break: break-all;
+
+}
+.city-info {
+    display: flex;
+    height: 20px;
+    }
+
+.description-info {
+     word-break: break-all;
+}
+

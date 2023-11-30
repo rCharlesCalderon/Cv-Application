@@ -10,7 +10,7 @@
   align-items: center;
   grid-row: 2 / 5;
   grid-column: 2 / 3;
-  background-color: whitesmoke;
+
  
 }
 
@@ -19,15 +19,18 @@
 
   min-height: 700px;
   width: 57%;
-  background-color: white;
   flex-direction: column;
   padding-top: 60px;
-align-items: center;
-gap: 7px;
+  align-items: center;
 box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 25px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 border-radius: 2px;
 }
-
+.output-data-container h2{
+ align-self: flex-start;
+ margin-left: 40px;
+  margin-top: 10px;
+  font-size: 1em;
+}
 .full-name{
   font-family: 'Times New Roman', Times, serif;
   font-size: 1.2em;
@@ -35,7 +38,7 @@ border-radius: 2px;
   align-items: center;
   justify-content: center;
   height: 20px;
-  
+  margin-bottom: 10px;
 }
 
 .contact-container{
@@ -51,13 +54,15 @@ border-radius: 2px;
   align-items: center;
   justify-content: center;
   gap: 4px;
+  font-size: 15px;
+  
 }
 .contact-container img {
   height: 15px;
 }
 
 hr{
-  width: 85%;
+  min-width: 85%;
 }
 
 .experience-input-container {
@@ -117,21 +122,34 @@ hr{
 .input-container span{
  font-size: 1.1em;
  font-family: 'Times New Roman', Times, serif;
- 
 }
 
 .input-info{
     display: flex;
   min-height: 30px;
  justify-content: space-between;
+ 
 
 }
+.input-info ul {
+  display: flex;
+  flex-direction: column;
+gap: 2px;
+ 
+
+}
+
+.input-info h5 {
+  color: #FFBF00;
+  font-size:1em;
+}
+.input-info ul li {
+  font-size: 15px;
+}
 .input-info li{
-   
 list-style: none;
 }
 .input-info li:nth-of-type(1){
-   
 list-style: circle;
 }
 
@@ -142,8 +160,10 @@ list-style: circle;
 .city-info {
     display: flex;
     height: 20px;
+     font-size: 15px;
     }
 
 .description-info {
-     word-break: break-all;
+     
+     overflow-wrap: break-word
 }

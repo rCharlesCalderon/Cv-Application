@@ -8,4 +8,14 @@
   min-height: 100vh;
   grid-template-rows: 50px repeat(2, 1fr) 40px;
   grid-template-columns: repeat(2, 1fr);
+ background: radial-gradient(343px at 46.3% 47.5%, rgb(242, 242, 242) 0%, rgb(241, 241, 241) 72.9%);
+}
+
+:root {
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

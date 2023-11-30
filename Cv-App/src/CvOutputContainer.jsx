@@ -2,7 +2,6 @@ import "./CvOutputContainer.css";
 import mailImg from './assets/mail.svg'
 import phoneImg from "./assets/phone.svg";
 import locationImg from "./assets/location.svg";
-import CvData from "./CvData";
 function CvOutputContainer({ cData,setCvData }) {
   return (
       <>
@@ -32,7 +31,7 @@ function CvOutputContainer({ cData,setCvData }) {
 
                   {cData.Experience.length > 0 && (
                       <>
-                          <span>Experience</span>
+                          <h2>Experience</h2>
 
                           <hr></hr>
                       </>
@@ -43,7 +42,7 @@ function CvOutputContainer({ cData,setCvData }) {
                           <div className="input-container" key={expObj.id}>
                               <div className="input-info">
                                   <ul>
-                                      <li>{expObj.jobTitle}</li>
+                                      <li><h5> {expObj.jobTitle} </h5></li>
                                       <li>{expObj.employer}</li>
                                       {expObj.startDate && (
                                           <li>
@@ -67,7 +66,7 @@ function CvOutputContainer({ cData,setCvData }) {
 
                   {cData.Education.length > 0 && (
                       <>
-                         <span>Education</span>
+                        <h2>Education</h2>
                           <hr></hr>
                       </>
                   )}
@@ -76,7 +75,7 @@ function CvOutputContainer({ cData,setCvData }) {
                           <div className="input-container" key={eduObj.id}>
                               <div className="input-info">
                                   <ul>
-                                      <li>{eduObj.school}</li>
+                                      <li> <h5> {eduObj.school}</h5> </li>
                                       <li>{eduObj.degree}</li>
                                       {eduObj.startDate && (
                                           <li>
@@ -96,6 +95,18 @@ function CvOutputContainer({ cData,setCvData }) {
                               )}
                           </div>
                       );
+                  })}
+                
+                  {cData.CustomSkills.map((skill)=>{
+                  
+                    return (
+                        
+                        <div className="input-container" key={skill.id}> 
+                        <div className="skill-title">{skill.title} </div>
+                        <hr></hr>
+                        <div className="input-info" >{skill.description} </div>
+                        </div>
+                    )
                   })}
               </div>
           </div>

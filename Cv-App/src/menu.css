@@ -2,15 +2,16 @@
     
     display: flex;
     border: 1px black solid;
-    width: 80%;
+    width: 90%;
     min-height: 25px;
     border-radius: 5px;
     flex-direction: column;
     padding: 10px;
     gap: 15px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 .menu-container:hover {
-    border-color: lightslategray;
+    border-color: goldenrod;
    
 }
 .contact-inputs {
@@ -22,9 +23,25 @@
     font-family: 'Times New Roman', Times, serif;
     margin-top: 10px;
 }
+
+.contact-inputs label {
+    color: black;
+    width: 33%;
+}
 .contact-inputs input {
-    max-width: 320px;
+    max-width: 380px;
     height: 25px;
     border-radius: 5px;
+    border: none;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.menu span{
+   font-family: 'Arial', sans-serif;
+   font-size: 1.1em;
+  text-align: center;
 }
 

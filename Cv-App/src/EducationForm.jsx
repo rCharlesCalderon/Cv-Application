@@ -50,13 +50,13 @@ function EducationForm({eduObj,cData,setCvData}){
     return (
         <>
             <div className="education-container ">
-                <Input label={'School'} onChange={handleSchoolInfo} />
-                <Input label={'Degree'} onChange={handleDegreeInfo} />
-                <Input label={'Start Date'} onChange={handleStartDateInfo} />
-                <Input label={'End Date '} onChange={handleEndDateInfo} />
-                <Input label={'City'} onChange={handleCityInfoInfo} />
+                <Input label={'School'} onChange={handleSchoolInfo} value={eduObj.school}/>
+                <Input label={'Degree'} onChange={handleDegreeInfo} value={eduObj.degree}/>
+                <Input label={'Start Date'} onChange={handleStartDateInfo} value={eduObj.startDate} />
+                <Input label={'End Date '} onChange={handleEndDateInfo} value={eduObj.endDate} />
+                <Input label={'City'} onChange={handleCityInfoInfo} value={eduObj.city}/>
                 <label>
-                    Description<textarea onChange={handledescriptionInfo}></textarea>
+                    Description<textarea onChange={handledescriptionInfo} value={eduObj.description}></textarea>
                 </label>
             </div>
         </>

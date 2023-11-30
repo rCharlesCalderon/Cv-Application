@@ -4,7 +4,6 @@
   grid-column: 1/2;
    flex-direction: column;
 }
-
 .CvInputContainer label {
   display: flex;
   flex-direction: column;
@@ -18,9 +17,15 @@
   height: 100%;
   gap: 10px;
 }
-.inputs span{
-font-family: 'Times New Roman', Times, serif;
 
+label input {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+border: none;
+}
+.inputs h1{
+font-family: 'Open Sans', sans-serif;
+font-size: 1.4em;
+color: goldenrod;
 }
 .personal-title{
   font-size: 1.7em;
@@ -34,6 +39,15 @@ font-family: 'Times New Roman', Times, serif;
   background: none;
   height: 30px;
   font-size: 1em;
+  border: none;
+  font-weight: bold;
+}
+
+.btn:hover{
+  color: goldenrod;
+  border: 1px goldenrod solid;
+  font-size: 1em;
+  font-weight: 700;
 }
 .exp-form{
   display: flex;
@@ -52,10 +66,17 @@ font-family: 'Times New Roman', Times, serif;
 .input-img-container {
   display: flex;
   flex-direction: row;
- 
+ gap: 5px;
 }
-
 
 .input-img-container img:hover{
 filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+.custom-input{ 
+  display: flex;
+  width: 260px;
+  height: 20px;
+  border-radius: 5px;
+  padding: 12px 20px;
+   resize: none;
 }

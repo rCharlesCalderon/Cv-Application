@@ -46,14 +46,14 @@ function ExperienceForm({expObj,cData, setCvData}){
       <>
         <div className="experience-input-container">
           
-         <div className="job-title">  <Input label={"Job title"} onChange={handleJobInfo} /> </div>
-        <div className="employer-input"> <Input label={"Employer"} onChange={handleEmployerInfo} /> </div> 
-        <div className="start-date-input">  <Input label={"Start Date"}  onChange={handleStartDateInfo}/> </div>
-         <div className="end-date-input">  <Input label={"End Date"} onChange={handleEndDateInfo} /> </div>
-         <div className="city-input"> <Input label={"City"} onChange={handleCityInfo}/> </div>
+         <div className="job-title">  <Input label={"Job title"} onChange={handleJobInfo} value={expObj.jobTitle} /> </div>
+        <div className="employer-input"> <Input label={"Employer"} onChange={handleEmployerInfo} value={expObj.employer}/> </div> 
+        <div className="start-date-input">  <Input label={"Start Date"}  onChange={handleStartDateInfo} value={expObj.startDate}/> </div>
+         <div className="end-date-input">  <Input label={"End Date"} onChange={handleEndDateInfo} value={expObj.endDate}/> </div>
+         <div className="city-input"> <Input label={"City"} onChange={handleCityInfo} value={expObj.city}/> </div>
           <div className="description-input"> 
           <label>Description</label>
-            <textarea onChange={handleDescriptionInfo} ></textarea>
+            <textarea onChange={handleDescriptionInfo} value={expObj.description} ></textarea>
            </div>
         </div>
       </>

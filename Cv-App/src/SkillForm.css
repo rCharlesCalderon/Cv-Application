@@ -1,0 +1,6 @@
+.skill-form-container textarea{
+height: 100px;
+width: 100%;
+resize: none;
+vertical-align: top;
+}

@@ -4,7 +4,7 @@ import arrowUp from "./assets/arrow-up.svg";
 import { useState } from 'react';
 
 function Menu({title = 'Title',inputForm }){
-    let [arrowDirection,setArrowDirection] = useState(false)
+    let [arrowDirection,setArrowDirection] = useState(true)
 
      function handleArrowImg() {
        setArrowDirection(!arrowDirection);

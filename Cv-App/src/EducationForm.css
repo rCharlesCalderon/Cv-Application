@@ -1,5 +1,4 @@
 .education-container{
-    border: 1px green solid;
     display: flex;
     min-height: 160px;
    flex-wrap: wrap;

@@ -6,9 +6,13 @@ import trashImg from './assets/trash.svg';
 import ExperienceForm from './ExperienceForm';
 import ContactInput from './ContactInput.jsx';
 import Menu from './Menu.jsx';
+import SkillForm from './SkillForm.jsx';
 function CvInputContainer({ cData, setCvData }) {
-
+const [customSkill, setCustomSkill] = useState('');
+const [customTitle, setCustomTitle] = useState('');
     const handleExperienceInfo = () => {
+         
+
         const newExperience = {
             jobTitle: '',
             company: '',
@@ -36,15 +40,17 @@ function CvInputContainer({ cData, setCvData }) {
          setCvData({ ...cData, Education: [...cData.Education, newEducation] });
          console.log(CvData);
      };
-
      const handleCustomInfo = ()=>{
-        let customSkillInput = document.querySelector('.custom-input').value
         const skill = {
-            description: customSkillInput,
+          title: customTitle,
+            description:customSkill,
+
              id: crypto.randomUUID()
         }
-
         setCvData({...cData,CustomSkills:[...cData.CustomSkills,skill]})
+
+        
+        setCustomTitle('');
        
      }
 
@@ -61,19 +67,22 @@ function CvInputContainer({ cData, setCvData }) {
        
     }
 
+    const handleCustomDelete = (customObj) =>{
+    const deleteExp = cData.CustomSkills.filter((obj) => obj.id !== customObj.id);
+
+    setCvData({ ...cData, CustomSkills: deleteExp });
+    }
+  
    
     return (
         <>
             <div className="CvInputContainer">
                 <div className="inputs">
-                    <span>Personal</span>
-                    <Menu
-                        title="Contact Info"
-                        inputForm={
-                            <ContactInput cData={cData} setCvData={setCvData} />
-                        }
+                    <h1>Personal</h1>
+                    <Menu title="Contact Info" inputForm={ <ContactInput cData={cData} setCvData={setCvData} />}
+                       
                     />
-                    <span>Experience</span>
+                    <h1>Experience</h1>
 
                     {cData.Experience.map((expObj,index) => {
                         return (
@@ -89,7 +98,7 @@ function CvInputContainer({ cData, setCvData }) {
                         );
                     })}
                     <button className="btn" onClick={handleExperienceInfo}>+ Add Experience </button>
-                    <span>Education</span>
+                   <h1>Education</h1>
                       {cData.Education.map((eduObj,index) =>{
                       
                         return(
@@ -103,10 +112,21 @@ function CvInputContainer({ cData, setCvData }) {
                       })}
                     <button className='btn' onClick={handleEducationInfo}>+ Add Education</button>
 
-                      <span>Custom</span>
+                      <h1>Custom</h1>
+                      {cData.CustomSkills.map((skillObj)=>{
+                        return(
+                        <div className='input-img-container' key={skillObj.id}> 
+                        <Menu title = {skillObj.title} inputForm={<SkillForm skillObj={skillObj} cData={cData} setCvData={setCvData}/>}></Menu>
+                        <img src={trashImg} className='trash-img' onClick={()=>{
+                              handleCustomDelete(skillObj);
+                            }}></img>
+                      </div>
+                       
+                        )
+                      })}
                       <span>Add your own section</span>
-                      <input className='custom-input'></input>
-                    <button className='btn' onClick={handleCustomInfo}>+Add Custom Section</button>
+                      <textarea className='custom-input'  placeholder = {'e.g. Technical Skills'} value={customTitle} onChange={(e) =>setCustomTitle(e.target.value)}></textarea>
+                    <button className='btn' onClick={handleCustomInfo}>+Add Custom Skill</button>
                 </div>
             </div>
         </>

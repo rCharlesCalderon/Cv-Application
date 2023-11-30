@@ -23,10 +23,10 @@ function ContactInput({cData,setCvData}){
     return (
       <>
         <div className="contact-inputs">
-          <Input label="Full Name" onChange={ handleNameInfo} />
-          <Input label="Email" onChange={handleEmailInfo} />
-          <Input label="Phone Number" onChange={handlePhoneInfo} />
-          <Input label="Address" onChange={handleAddressInfo} />
+          <Input label="Full Name" onChange={ handleNameInfo} value={cData.name}/>
+          <Input label="Email" onChange={handleEmailInfo} value={cData.Email}/>
+          <Input label="Phone Number" onChange={handlePhoneInfo} value={cData.PhoneNumber}/>
+          <Input label="Address" onChange={handleAddressInfo} value={cData.Address}/>
         </div>
       </>
     );
