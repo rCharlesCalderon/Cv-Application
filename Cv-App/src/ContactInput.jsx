@@ -1,5 +1,5 @@
 import Input from "./Input";
-import CvData from "./CvData";
+
 function ContactInput({cData,setCvData}){
     
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './CvInputContainer.css';
-import CvData from './CvData';
+
 import EducationForm from './EducationForm.jsx';
 import trashImg from './assets/trash.svg';
 import ExperienceForm from './ExperienceForm';

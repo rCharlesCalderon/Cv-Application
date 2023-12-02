@@ -6,8 +6,9 @@ import './header.css'
 import { useState } from 'react';
 import Header from './Header.jsx';
 
+
 function App() {
-  //Contact Info
+  //Data Storage 
 const [cData,setCvData] = useState( {
   name: "",
   Email: "",
@@ -18,16 +19,17 @@ const [cData,setCvData] = useState( {
   CustomSkills: [],
 })
 
-//
 
-                                                                                                   //setJob, setEmployer, setEndDate, setCityInfo, setDescription;
+                                             
   return (
       <>
-          <Header />
-          <ButtonHeader cData={cData} setCvData={setCvData} />
-          <CvInputContainer cData={cData} setCvData={setCvData} />
-          <CvOutputContainer cData={cData} setCvData={setCvData} />
-          <Footer />
+   
+              <Header />
+              <ButtonHeader cData={cData} setCvData={setCvData} />
+              <CvInputContainer cData={cData} setCvData={setCvData} />
+              <CvOutputContainer cData={cData} setCvData={setCvData} />
+              <Footer />
+      
       </>
   );
 }

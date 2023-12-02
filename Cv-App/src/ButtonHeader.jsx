@@ -1,6 +1,11 @@
 import './ButtonHeader.css'
 
 function ButtonHeader({cData,setCvData}){
+
+
+
+
+    
     function handleSampleData() {
    const exp = {
        jobTitle: 'News Anchorman',
@@ -46,13 +51,13 @@ function ButtonHeader({cData,setCvData}){
     }
 
     function handlePDF(){
-        const pdfUrl = 'Sample.pdf';
-        const link = document.createElement('a');
-        link.href = pdfUrl;
-        link.download = 'CvOutputContainer.pdf'; // specify the filename
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+         const pdfUrl = 'Sample.pdf';
+         const link = document.createElement('a');
+         link.href = pdfUrl;
+         link.download = 'document.pdf'; // specify the filename
+         document.body.appendChild(link);
+         link.click();
+         document.body.removeChild(link);
     }
 return (
     <>
