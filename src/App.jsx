@@ -6,32 +6,36 @@ import './header.css'
 import { useState } from 'react';
 import Header from './Header.jsx';
 
+import React, { useRef } from 'react';
+import { useReactToPrint } from 'react-to-print';
 
 function App() {
-  //Data Storage 
-const [cData,setCvData] = useState( {
-  name: "",
-  Email: "",
-  PhoneNumber: "",
-  Address: "",
-  Experience: [],
-  Education: [],
-  CustomSkills: [],
-})
+    //Data Storage
+    const [cData, setCvData] = useState({
+        name: '',
+        Email: '',
+        PhoneNumber: '',
+        Address: '',
+        Experience: [],
+        Education: [],
+        CustomSkills: [],
+    });
 
+    const printRef = useRef();
 
-                                             
-  return (
-      <>
-   
-              <Header />
-              <ButtonHeader cData={cData} setCvData={setCvData} />
-              <CvInputContainer cData={cData} setCvData={setCvData} />
-              <CvOutputContainer cData={cData} setCvData={setCvData} />
-              <Footer />
-      
-      </>
-  );
+    return (
+        <>
+            <Header />
+            <ButtonHeader
+                cData={cData}
+                setCvData={setCvData}
+                printRef={printRef}
+            />
+            <CvInputContainer cData={cData} setCvData={setCvData} />
+            <CvOutputContainer cData={cData} ref={printRef} />
+            <Footer />
+        </>
+    );
 }
 
 export default App
