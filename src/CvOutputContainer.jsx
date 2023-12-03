@@ -1,7 +1,7 @@
 import "./CvOutputContainer.css";
 import mailImg from './assets/mail.svg'
 import phoneImg from "./assets/phone.svg";
-import locationImg from "./assets/location.svg";
+import geoImg from './assets/geo.svg';
 
 function CvOutputContainer({ cData }) {
     return (
@@ -14,7 +14,7 @@ function CvOutputContainer({ cData }) {
                     <div className="contact-container">
                         {cData.Address && (
                             <span>
-                                <img src={locationImg}></img>
+                                <img src={geoImg}></img>
                                 {cData.Address}
                             </span>
                         )}
