@@ -51,16 +51,19 @@
     display: flex !important;
     flex-direction: column  !important;
 }
-
+.CvInputContainer { 
+    align-items: center;
+}
 .output-data-container {
-    width: 70% !important;
+    width: 80% !important;
 
 }
 
 .btn {
-    width: 23%;
+    width: 100%;
 }
 .inputs {
     align-items: center;
+    padding: 40px, 0px 0px 40px;
 }
 }
