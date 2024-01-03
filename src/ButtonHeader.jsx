@@ -1,7 +1,8 @@
 import './ButtonHeader.css'
 import { useReactToPrint } from 'react-to-print';
 import CvOutputContainer from './CvOutputContainer';
-function ButtonHeader({ cData, setCvData, printRef }) {
+import { func } from 'prop-types';
+function ButtonHeader({ cData, setCvData }) {
     function handleSampleData() {
         const exp = {
             jobTitle: 'News Anchorman',
@@ -47,17 +48,15 @@ function ButtonHeader({ cData, setCvData, printRef }) {
         });
     }
 
-    const handlePrint = useReactToPrint({
-        content: () => printRef.current,
-    });
+    function handlePrint() {
+        prompt('Will make the print button work later sorry friend :,(');
+    }
     return (
         <>
             <div className="btn-container">
                 <button onClick={handleSampleData}>Load Sample</button>
                 <button onClick={handleClear}>Clear</button>
-                <button onClick={handlePrint} ref={printRef}>
-                    Print
-                </button>
+                <button onClick={handlePrint}>Print</button>
             </div>
         </>
     );

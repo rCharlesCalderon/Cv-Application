@@ -6,8 +6,6 @@ import './header.css'
 import { useState } from 'react';
 import Header from './Header.jsx';
 
-import React, { useRef } from 'react';
-import { useReactToPrint } from 'react-to-print';
 
 function App() {
     //Data Storage
@@ -21,18 +19,12 @@ function App() {
         CustomSkills: [],
     });
 
-    const printRef = useRef();
-
     return (
         <>
             <Header />
-            <ButtonHeader
-                cData={cData}
-                setCvData={setCvData}
-                printRef={printRef}
-            />
+            <ButtonHeader cData={cData} setCvData={setCvData} />
             <CvInputContainer cData={cData} setCvData={setCvData} />
-            <CvOutputContainer cData={cData} ref={printRef} />
+            <CvOutputContainer cData={cData} />
             <Footer />
         </>
     );
