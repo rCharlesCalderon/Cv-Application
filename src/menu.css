@@ -45,3 +45,22 @@
   text-align: center;
 }
 
+@media (max-width:1000px){
+   
+#root {
+    display: flex !important;
+    flex-direction: column  !important;
+}
+
+.output-data-container {
+    width: 70% !important;
+
+}
+
+.btn {
+    width: 23%;
+}
+.inputs {
+    align-items: center;
+}
+}
